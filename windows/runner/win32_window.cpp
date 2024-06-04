@@ -264,12 +264,12 @@ void Win32Window::SetQuitOnClose(bool quit_on_close) {
 }
 
 bool Win32Window::OnCreate() {
-  // No-op; provided for subclasses.
+  // No-op; provided for subPlaces.
   return true;
 }
 
 void Win32Window::OnDestroy() {
-  // No-op; provided for subclasses.
+  // No-op; provided for subPlaces.
 }
 
 void Win32Window::UpdateTheme(HWND const window) {

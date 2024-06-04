@@ -8,7 +8,7 @@
 #include <string>
 
 // A class abstraction for a high DPI-aware Win32 Window. Intended to be
-// inherited from by classes that wish to specialize with custom
+// inherited from by Places that wish to specialize with custom
 // rendering and input handling
 class Win32Window {
  public:
@@ -58,14 +58,14 @@ class Win32Window {
  protected:
   // Processes and route salient window messages for mouse handling,
   // size change and DPI. Delegates handling of these to member overloads that
-  // inheriting classes can handle.
+  // inheriting Places can handle.
   virtual LRESULT MessageHandler(HWND window,
                                  UINT const message,
                                  WPARAM const wparam,
                                  LPARAM const lparam) noexcept;
 
   // Called when CreateAndShow is called, allowing subclass window-related
-  // setup. Subclasses should return false if setup fails.
+  // setup. SubPlaces should return false if setup fails.
   virtual bool OnCreate();
 
   // Called when Destroy is called.
